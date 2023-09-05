@@ -16,7 +16,8 @@ function App() {
   };
 
 
-  const API_KEY = process.env.OPENAI_API_KEY;
+  const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+  
   const systemMessage = {
     "role": "system",
     "content": prompt
@@ -76,7 +77,7 @@ function App() {
       {
         method: "POST",
         headers: {
-          "Authorization": "Bearer " + API_KEY,
+          "Authorization": "Bearer " + OPENAI_API_KEY,
           "Content-Type": "application/json"
         },
         body: JSON.stringify(apiRequestBody)
