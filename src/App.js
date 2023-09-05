@@ -16,7 +16,7 @@ function App() {
   };
 
 
-  const API_KEY = "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";
+  const API_KEY = process.env.OPENAI_API_KEY;
   const systemMessage = {
     "role": "system",
     "content": prompt
